@@ -332,7 +332,7 @@ def setup(yaml_path):
     except yaml.YAMLError as e:
         print(f'[EnvKit] Error: YAML syntax error ({e})')
         return False
-    print(f'[EnvKit] Info: Config file is {yaml_path}')
+    print(f'[EnvKit] Info: Config file = {yaml_path}')
     
     # Get the platform
     platform = config.get('platform', 'auto')
@@ -341,7 +341,7 @@ def setup(yaml_path):
         return
     if platform == 'auto':
         platform = detect_platform()
-    print(f'[EnvKit] Info: Platform is {platform}')
+    print(f'[EnvKit] Info: Platform = {platform}')
 
     # Load secrets
     secrets = get_secrets(platform)
