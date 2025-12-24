@@ -337,7 +337,7 @@ def setup(yaml_path):
     # Get the platform
     platform = config.get('platform', 'auto')
     if platform not in ['auto', 'colab', 'kaggle', 'local']:
-        print(f'[EnvKit] Error: Invalid platform ({platform})')
+        platform = 'auto'
         return
     if platform == 'auto':
         platform = detect_platform()
