@@ -311,7 +311,7 @@ def process_downloads(config, secrets):
 
         if task.get('extract') is True:
             extract_to = task.get('extract_to')
-            remove_archieve = task.get('remove_compression', False)
+            remove_archieve = task.get('remove_archieve', False)
             if 'kaggle_competition' in task or 'kaggle_dataset' in task:
                 target_path = kaggle_downloaded_archive_path
             extract_file(target_path, extract_to, remove_archieve)
